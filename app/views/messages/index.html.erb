@@ -1,19 +1,9 @@
 <h1>メッセージ一覧</h1>
 <% @messages.each do |message| %>
-  名前:<%= message.name %>
-  内容:<%= message.body %>
   <br>
 <% end %>
 
 <%= form_for(@message) do |f| %>
-<<<<<<< HEAD
-  名前:
-  <%= f.text_field :name %>
-  
-  内容:
-  <%= f.text_field :body %>
-  <%= f.submit %>
-=======
   <% if @message.errors.present? %>
     <div class="alert alert-danger">
       <%= alert %>
@@ -38,5 +28,4 @@
   </div>
   
   <%= f.submit class: "btn btn-sm btn-primary" %>
->>>>>>> cd548f6... Implementation of the validation
 <% end %>
